@@ -1,0 +1,118 @@
+/* ================================
+   Global CSS Reset & Base Styles
+   Optimized for Modern Web Projects
+   ================================ */
+
+/* 1. Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Remove default styles from all elements except essential ones */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* 3. Base Styles */
+:root {
+    color-scheme: dark; /* Supports both themes */
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    min-height: 100vh;
+    font-size: 16px;
+    text-size-adjust: none;
+    touch-action: manipulation;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    content-visibility: auto;
+    container-type: inline-size;
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 15rem;
+}
+
+/* 4. Image & Media Handling */
+img, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 5. Form Elements Consistency */
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+input::-moz-focus-inner, button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* 6. Reset Specific Elements */
+a, button {
+    cursor: pointer;
+}
+
+ol, ul, menu, summary {
+    list-style: none;
+}
+
+ol {
+    counter-reset: revert; /* Fix nested ordered lists in Firefox */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+textarea {
+    white-space: revert;
+}
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+::placeholder {
+    color: unset;
+}
+
+[hidden] {
+    display: none;
+}
+
+[contenteditable]:not([contenteditable="false"]) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+[draggable="true"] {
+    -webkit-user-drag: element;
+}
+
+dialog:modal {
+    all: revert;
+    box-sizing: border-box;
+}
+
+::-webkit-details-marker {
+    display: none;
+}
